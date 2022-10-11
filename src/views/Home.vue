@@ -9,11 +9,16 @@
         <img class="slide" :src="_.banner">
       </SwiperSlide>
     </Swiper>
-    <ul class="btns">
-      <li v-for="_ in menu" :key="_.id">
-        <router-link class="btn" :to="`/details/${_.id}`">{{ _.title }}</router-link>
-      </li>
-    </ul>
+    <div class="content">
+      <ul class="btns">
+        <li v-for="_ in menu" :key="_.id">
+          <router-link :to="`/details/${_.id}`">
+            <img :src="_.icon">
+            <div>{{ _.title }}</div>
+          </router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -32,19 +37,26 @@ onBeforeMount(() => {
 .slide {
   width: 100%;
 }
+.content {
+  padding: .6rem;
+}
 .btns {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 1rem 0;
-  .btn {
-    box-sizing: content-box;
-    width: 2.2em;
-    height: 2.2em;
-    border-radius: 5em;
-    margin: .5em;
-    padding: 1em;
+  background-color: #fff;
+  border-radius: 6px;
+  li {
+    text-align: center;
+    padding: 0 .3rem;
+  }
+  a {
+    display: inline-block;
+    font-size: .9rem;
+    color: #616161;
+  }
+  img {
+    height: 1.5em;
   }
 }
 </style>

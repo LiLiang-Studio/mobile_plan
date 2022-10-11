@@ -1,10 +1,12 @@
 <template>
   <div v-if="submenu">
     <img class="banner" :src="submenu.banner">
-    <div class="title">{{ submenu.title }}</div>
-    <ul class="btns">
-      <li v-for="_ in submenu.items" :key="_" class="btn">{{ _ }}</li>
-    </ul>
+    <div class="content">
+      <div class="title">{{ submenu.title }}</div>
+      <ul class="btns">
+        <li v-for="_ in submenu.items" :key="_" class="btn">{{ _ }}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -28,19 +30,27 @@ onBeforeMount(() => {
 .banner {
   width: 100%;
 }
+.content {
+  margin: 1.2rem .6rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+}
 .btns {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   .btn {
-    width: 40%;
-    margin: 1rem 3%;
+    width: 42%;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    margin: .6rem 2%;
   }
 }
 .title {
   text-align: center;
-  margin: 1em;
+  margin: .5rem 0 .8rem;
   font-size: 1.5rem;
   color: #333;
 }
