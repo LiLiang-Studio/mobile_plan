@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, onBeforeMount } from 'vue'
 import { useRoute } from 'vue-router'
 import menu from '../assets/data'
 
@@ -17,6 +17,10 @@ const route = useRoute()
 
 const submenu = computed(() => {
   return menu.find(_ => _.id === +route.params.id)
+})
+
+onBeforeMount(() => {
+  document.title = submenu.value.title
 })
 </script>
 

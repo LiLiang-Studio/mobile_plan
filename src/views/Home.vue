@@ -18,10 +18,14 @@
 </template>
 
 <script setup>
+import { onBeforeMount } from 'vue'
 import { Autoplay, Pagination, Swiper, SwiperSlide } from '../plugins/swiper'
 import menu from '../assets/data'
 
 const swiperMmodules = [Autoplay, Pagination]
+onBeforeMount(() => {
+  document.title = '首页'
+})
 </script>
 
 <style lang="less" scoped>
@@ -33,6 +37,7 @@ const swiperMmodules = [Autoplay, Pagination]
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 1rem 0;
   .btn {
     box-sizing: content-box;
     width: 2.2em;

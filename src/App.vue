@@ -39,8 +39,8 @@ li {
 
 .btn {
   display: inline-block;
-  background-color: #4472c4;
-  border: 1px solid #2f528f;
+  background-color: #2196f3;
+  border: 1px solid #1976d2;
   color: #fff;
   font-size: 1.2rem;
   padding: .5rem 1rem;
