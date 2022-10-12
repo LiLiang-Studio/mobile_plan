@@ -22,7 +22,7 @@
       </ul>
       <img class="img img-combo" src="/2.png">
     </div>
-    <div class="bottom"></div>
+    <!-- <div class="bottom"></div> -->
   </div>
 </template>
 

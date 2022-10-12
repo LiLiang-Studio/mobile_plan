@@ -3,8 +3,7 @@ import iconFamily from '../assets/images/family.svg'
 import iconRecharge from '../assets/images/recharge.svg'
 import iconService from '../assets/images/service.svg'
 import iconTerminal from '../assets/images/terminal.svg'
-
-const getSrc = path => [process.env.base || '/', path].join('/')
+import { getSrc } from '../utils'
 
 export default [
   {
