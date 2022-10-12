@@ -92,6 +92,8 @@ onBeforeMount(() => {
   bottom: 0;
   left: 0;
   background: #fff url('/3.png') no-repeat center center;
-  background-size: 90%;
+  background-size: contain;
+  background-origin: content-box;
+  padding: .3rem;
 }
 </style>
