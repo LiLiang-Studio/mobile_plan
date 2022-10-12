@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <Swiper
       loop
       :pagination="{ clickable: true }"
@@ -13,12 +13,16 @@
       <ul class="btns">
         <li v-for="_ in menu" :key="_.id">
           <router-link :to="`/details/${_.id}`">
-            <img :src="_.icon">
+            <div class="icon">
+              <img :src="_.icon">
+            </div>
             <div>{{ _.title }}</div>
           </router-link>
         </li>
       </ul>
+      <img class="img img-combo" src="/2.png">
     </div>
+    <div class="bottom"></div>
   </div>
 </template>
 
@@ -34,8 +38,12 @@ onBeforeMount(() => {
 </script>
 
 <style lang="less" scoped>
+.container {
+  padding-bottom: 60px;
+}
 .slide {
   width: 100%;
+  height: 180px;
 }
 .content {
   padding: .6rem;
@@ -44,19 +52,46 @@ onBeforeMount(() => {
   display: flex;
   justify-content: space-around;
   padding: 1rem 0;
-  background-color: #fff;
   border-radius: 6px;
+  background: url('/0.png') no-repeat center center;
+  background-size: cover;
+  font-size: .8rem;
   li {
     text-align: center;
     padding: 0 .3rem;
   }
   a {
-    display: inline-block;
-    font-size: .9rem;
+    display: block;
     color: #616161;
   }
   img {
-    height: 1.5em;
+    height: 1.6em;
   }
+  .icon {
+    width: 3.2em;
+    height: 3.2em;
+    border-radius: 4em;
+    margin: 0 auto .3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebf4fb;
+  }
+}
+.img {
+  width: 100%;
+  &.img-combo {
+    margin: .6rem 0;
+  }
+}
+.bottom {
+  display: flex;
+  height: 52px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff url('/3.png') no-repeat center center;
+  background-size: 90%;
 }
 </style>

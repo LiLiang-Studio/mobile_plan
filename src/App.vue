@@ -25,7 +25,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(to bottom, rgb(68, 114, 196), #fff);
+  background: linear-gradient(to bottom, #2679f4, #fff);
 }
 
 a {
