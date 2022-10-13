@@ -1,34 +1,25 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import HomeLayout from './views/HomeLayout.vue'
+import Home from './views/Home.vue'
+import Tariff from './views/Tariff.vue'
+import Terminal from './views/Terminal.vue'
+import Mine from './views/Mine.vue'
+import Details from './views/Details.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
       path: '/',
-      component: () => import('./views/HomeLayout.vue'),
+      component: HomeLayout,
       children: [
-        {
-          path: '',
-          component: () => import('./views/Home.vue')
-        },
-        {
-          path: 'tariff',
-          component: () => import('./views/Tariff.vue')
-        },
-        {
-          path: 'terminal',
-          component: () => import('./views/Terminal.vue')
-        },
-        {
-          path: 'mine',
-          component: () => import('./views/Mine.vue')
-        }
+        { path: '', component: Home },
+        { path: 'tariff', component: Tariff },
+        { path: 'terminal', component: Terminal },
+        { path: 'mine', component: Mine }
       ]
     },
-    {
-      path: '/details/:id',
-      component: () => import('./views/Details.vue')
-    }
+    { path: '/details/:id', component: Details }
   ]
 })
 
