@@ -12,16 +12,16 @@
 const cls = 'page-terminal'
 const imgList = [
   {
-    src: '/zhongduan01.jpg'
+    src: 'zhongduan01.jpg'
   },
   {
-    src: '/zhongduan02.jpg'
+    src: 'zhongduan02.jpg'
   },
   {
-    src: '/zhongduan03.jpg'
+    src: 'zhongduan03.jpg'
   },
   {
-    src: '/zhongduan05.jpg'
+    src: 'zhongduan05.jpg'
   }
 ]
 </script>

@@ -38,8 +38,6 @@ const items = [
     a {
       display: block;
     }
-    img {
-    }
   }
 }
 </style>
