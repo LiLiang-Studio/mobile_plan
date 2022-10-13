@@ -22,7 +22,6 @@
       </ul>
       <img class="img img-combo" src="/2.png">
     </div>
-    <!-- <div class="bottom"></div> -->
   </div>
 </template>
 
@@ -83,17 +82,5 @@ onBeforeMount(() => {
   &.img-combo {
     margin: .6rem 0;
   }
-}
-.bottom {
-  display: flex;
-  height: 52px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #fff url('/3.png') no-repeat center center;
-  background-size: contain;
-  background-origin: content-box;
-  padding: .3rem;
 }
 </style>
